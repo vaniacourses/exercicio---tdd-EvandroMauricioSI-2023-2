@@ -1,11 +1,12 @@
 package tdd_processador_boletos;
 
-import org.junit.Test;
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertTrue;
+
+import org.junit.jupiter.api.Test;
 
 public class ProcessadorBoletoTest {
-	
-	public class TestProcessadorBoletos {
 
 	    @Test
 	    public void testFaturaPaga_BoletosSuficientes() {
@@ -43,8 +44,5 @@ public class ProcessadorBoletoTest {
 	        Pagamento[] pagamentos = ProcessadorBoletos.processarBoletos(boletos, fatura);
 	        assertFalse(fatura.estaPaga());
 	        assertEquals(2, pagamentos.length);
-	    }
-
-	
-	
+	    }	
 }
